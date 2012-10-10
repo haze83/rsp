@@ -1,0 +1,11 @@
+<h4>
+  <small>
+    <%= article.published_on %>
+    <%= link_to 'edit', edit_article_path(article) if user_signed_in? %>
+  </small><br />
+  <%= article.name %>
+</h4>
+<p>
+  <%= article.content %>
+</p>
+<%= render :partial => "uploads/image", :collection => article.uploads %>

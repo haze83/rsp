@@ -1,7 +1,10 @@
 <% if user_signed_in? %>
-  <li>
-  <%= link_to('Logout', destroy_user_session_path, :method=>'delete') %>        
-  </li>
+  <li><%= link_to 'New Navigation', new_navigation_path %></li>
+  <li><%= link_to 'List Navigations', navigations_path %></li>
+  <li><%= link_to 'New Article', new_article_path %></li>
+  <li><%= link_to 'List Articles', articles_path %></li>
+  <li><%= link_to 'New Image', new_upload_path %></li>
+  <li><%= link_to('Logout', destroy_user_session_path, :method=>'delete') %></li>
 <% else %>
   <li>
   <%= link_to('Login', new_user_session_path)  %>  
